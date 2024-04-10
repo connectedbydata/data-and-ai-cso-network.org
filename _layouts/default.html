@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="has-background-light" lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+    {%- include header.html -%}
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns">
+            <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
+              <div class="content is-size-4">
+                <p>
+                  The Civil Society Data and AI Network brings together diverse civil society organisations and campaigners to share and collaborate on policy, campaigns and advocacy on data and AI. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="meetings">
+      <div class="container is-max-desktop">
+        <h2 class="title">Meetings</h2>
+        <div class="columns">
+          <div class="column is-half-desktop is-half-fullhd">
+            <div class="content is-size-5">
+              <p>
+                We hold meetings with the following rhythm:
+              </p>
+              <ul>
+                <li><strong>Fortnightly (+/- 30 mins):</strong> A short call on data and AI policy issues of the day and for participants to share and seek input on their work.</li>
+                <li><strong>Bi-monthly/by arrangement (Up to 1 hour, every 4th meeting):</strong> A selected guest is invited to engage with the Network.</li>
+                <li><strong>Quarterly (Up to 1.5 hours):</strong> An open discussion and forward look on data and AI policy.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column is-half-desktop is-half-fullhd">
+            <div class="content is-size-5">
+              <p>Notes from previous meetings are made available publicly, to facilitate participation.</p>
+              <p>As with all information shared in the meeting, notes are taken under Chatham House Rule: participants are free to use the information received, but neither the identity nor the affiliation of the speaker(s), nor that of any other participant, will be revealed.</p>
+              <p>Participants can opt out of notes being made of their comments and/or being listed as an attendee.</p>
+            </div>
+          </div>
+        </div>
+        <div class="content is-size-5">
+          <p><em>If you would like to be invited to any of these meetings, please contact <a href="mailto:adam@connectedbydata.org">adam@connectedbydata.org</a>.</em></p>
+        </div>
+
+        {%- assign upcoming = site.meetings | where: "upcoming", "true" -%}
+        {%- if upcoming.size > 0 -%}
+          <h3 class="title is-size-4">Upcoming meetings</h3>
+          {%- for meeting in upcoming -%}
+            <div class="columns">
+              <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
+              <div class="column is-three-fifths">{{ meeting.content }}</div>
+              <div class="column is-one-fifth">
+                {%- if meeting.agenda -%}
+                  <a href="{{meeting.agenda}}">Agenda</a>
+                {%- else -%}
+                  Agenda TBC
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+
+        {%- assign previous = site.meetings | where: "upcoming", "false" | reverse -%}
+        {%- if previous.size > 0 -%}
+          <h3 class="title is-size-4">Previous meetings</h3>
+          {%- for meeting in previous -%}
+            <div class="columns">
+              <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
+              <div class="column is-three-fifths">{{ meeting.content }}</div>
+              <div class="column is-one-fifth"><a href="{{meeting.agenda}}">Notes</a></div>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+        <div class="content is-size-6">
+          <p><em>Meeting notes prior to April 2024 are not publicly available.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero" id="dpd">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title">Data policy digest</h2>
+          <div class="columns">
+            <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
+              <div class="content is-size-5">
+                <p>
+                  A comprehensive (and humorous) regular posting, up to twice a month, pulling together all the news, views and gossip from data and AI policy land, with a UK focus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="buttons">
+            <a class="button" href="https://connectedbydata.us21.list-manage.com/subscribe?u=7c03d6a429375c9cc2eef194f&id=3c200de804">
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i>
+                </span>
+                <span>Subscribe</span>
+              </span>
+            </a>
+            <a class="button" href="https://connectedbydata.org/projects/2023-data-policy-digest">
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
+                </span>
+                <span>Back issues</span>
+              </span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="description">
+      <div class="container is-max-desktop">
+        <h2 class="title">About the network</h2>
+        <div class="columns">
+          <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
+            <div class="content is-size-5">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero" id="testimonials">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title">What participants say</h2>
+          <div class="grid">
+            {%- for testimonial in site.testimonials -%}
+              <div class="cell">
+                <div class="box mb-4">
+                  {{ testimonial.content }}
+                  <p class="has-text-right">
+                    – {{ testimonial.from }}
+                  </p>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
