@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-The Civil Society Data and AI Network brings together diverse civil society organisations and campaigners to share and collaborate on policy, campaigns and advocacy on data and AI. 
+The Data and AI Civil Society Network brings together diverse civil society organisations and campaigners to share and collaborate on policy, campaigns and advocacy on data and AI. 
 
 Participants in the Network work for data and AI related policy and practice that is democratic and inclusive, that upholds the highest standards of human rights and brings benefits to communities, societies and the environment.
 

@@ -13,7 +13,7 @@
             <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
               <div class="content is-size-4">
                 <p>
-                  The Civil Society Data and AI Network brings together diverse civil society organisations and campaigners to share and collaborate on policy, campaigns and advocacy on data and AI. 
+                  The Data and AI Civil Society Network brings together diverse civil society organisations and campaigners to share and collaborate on policy, campaigns and advocacy on data and AI. 
                 </p>
               </div>
             </div>
@@ -54,7 +54,7 @@
         {%- if upcoming.size > 0 -%}
           <h3 class="title is-size-4">Upcoming meetings</h3>
           {%- for meeting in upcoming -%}
-            <div class="columns">
+            <div class="columns is-size-5">
               <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
               <div class="column is-three-fifths">{{ meeting.content }}</div>
               <div class="column is-one-fifth">
@@ -72,7 +72,7 @@
         {%- if previous.size > 0 -%}
           <h3 class="title is-size-4">Previous meetings</h3>
           {%- for meeting in previous -%}
-            <div class="columns">
+            <div class="columns is-size-5">
               <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
               <div class="column is-three-fifths">{{ meeting.content }}</div>
               <div class="column is-one-fifth"><a href="{{meeting.agenda}}">Notes</a></div>
@@ -139,9 +139,15 @@
           <h2 class="title">What participants say</h2>
           <div class="grid">
             {%- for testimonial in site.testimonials -%}
-              <div class="cell">
+              <div class="cell is-size-5">
                 <div class="box mb-4">
+                  <span class="icon">
+                    <i class="fas fa-quote-left"></i>
+                  </span>
                   {{ testimonial.content }}
+                  <span class="icon">
+                    <i class="fas fa-quote-right"></i>
+                  </span>
                   <p class="has-text-right">
                     – {{ testimonial.from }}
                   </p>
