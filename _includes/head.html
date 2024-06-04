@@ -12,6 +12,7 @@
   <style type="text/css">
     :root {
       --blue-munsell: #388697ff;
+      --emerald: #62c370;
       --platinum: #f6f4f5;
       --darker-platinum: #e4dde0;
       --plum: #9b5094ff;
@@ -39,8 +40,25 @@
       color: var(--platinum);
     }
 
-    section.hero .title, section.hero a.navbar-item, section.hero a.navbar-item:hover {
+    section.hero .title, section.hero a, section.hero a:hover {
       color: var(--platinum);
+    }
+
+    section.hero a.button, section.hero a.button:hover {
+      color: var(--raisin-black);
+    }
+
+    section.hero.highlight {
+      background-color: var(--emerald);
+      color: var(--raisin-black);
+    }
+
+    section.hero.highlight .title, section.hero.highlight a, section.hero.highlight a:hover {
+      color: var(--raisin-black);
+    }
+
+    section.hero.is-small h2.title {
+      padding-top: 0px;
     }
 
     .navbar-menu {
@@ -65,6 +83,7 @@
 
     a, a:visited {
       color: var(--plum);
+      font-weight: bold;
     }
 
     footer, footer .navbar, footer .navbar-menu {

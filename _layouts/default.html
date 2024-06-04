@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html class="has-background-light" lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html class="has-background-light" lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
   {%- include head.html -%}
 
   <body>
     {%- include header.html -%}
+
+    <section class="hero is-small highlight">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title">General Election</h2>
+          <div class="columns">
+            <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
+              <div class="content is-size-5">
+                <p>
+                  It's General Election time! Get all the pointers you need at the <a href="https://docs.google.com/document/d/17OtfyoS7aRKJR5DIW-OOVkXYVe2lG06vm5cdPXyzZYI/edit">Data and AI Civil Society Network Election Hub</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="hero">
       <div class="hero-body">
@@ -48,7 +65,6 @@
         </div>
         <div class="content is-size-5">
           <p><em>If you would like to be invited to any of these meetings, please contact <a href="mailto:adam@connectedbydata.org">adam@connectedbydata.org</a>.</em></p>
-          <p>The Network maintains a list of <A href="https://docs.google.com/document/d/1_UjXyrbn19xjEaFUX9LCgHlSr3BVTyqQgu9b8aCfLW0/edit#heading=h.on6t6e1pye4">Data Protection and Digital Information Bill (DPDIB) related resources</A> which you can access.</p>
         </div>
 
         {%- assign upcoming = site.meetings | where: "upcoming", "true" -%}
@@ -117,6 +133,29 @@
               </span>
             </a>
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero highlight" id="resources">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title">Resources</h2>
+          <div class="columns">
+            <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
+              <div class="content is-size-5">
+                <p>Find useful resources here:</p>
+                <ul>
+                  <li>
+                    <a href="https://docs.google.com/document/d/17OtfyoS7aRKJR5DIW-OOVkXYVe2lG06vm5cdPXyzZYI/edit">Data and AI Civil Society Network Election Hub</a>
+                  </li>
+                  <li>
+                    <a href="https://docs.google.com/document/d/1_UjXyrbn19xjEaFUX9LCgHlSr3BVTyqQgu9b8aCfLW0/edit">Data Protection and Digital Information Bill (DPDIB) related resources</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
