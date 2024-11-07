@@ -26,30 +26,17 @@
       <div class="container is-max-desktop">
         <h2 class="title">Meetings</h2>
         <div class="columns">
-          <div class="column is-half-desktop is-half-fullhd">
+          <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
             <div class="content is-size-5">
-              <p>
-                We hold meetings with the following rhythm:
-              </p>
-              <ul>
-                <li><strong>Fortnightly (+/- 30 mins):</strong> A short call on data and AI policy issues of the day and for participants to share and seek input on their work.</li>
-                <li><strong>Bi-monthly/by arrangement (Up to 1 hour, every 4th meeting):</strong> A selected guest is invited to engage with the Network.</li>
-                <li><strong>Quarterly (Up to 1.5 hours):</strong> An open discussion and forward look on data and AI policy.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="column is-half-desktop is-half-fullhd">
-            <div class="content is-size-5">
-              <p>Notes from previous meetings are made available publicly, to facilitate participation.</p>
-              <p>As with all information shared in the meeting, notes are taken under Chatham House Rule: participants are free to use the information received, but neither the identity nor the affiliation of the speaker(s), nor that of any other participant, will be revealed.</p>
-              <p>Participants can opt out of notes being made of their comments and/or being listed as an attendee.</p>
+              <p>The Network hosts various meetings focused on different aspects of data and AI policy.</P> 
+                Meetings are held under Chatham House rules, with <a href="https://drive.google.com/drive/folders/1oyIAmBgCmT_XcZF90VEUPDaeswL9rbtU?usp=drive_link">notes from previous meetings made available publicly</a>. Participants can opt out of notes being made of their comments and/or being listed as an attendee.</P>
+                <div class="content is-size-6">
+                  <p><em>Meeting notes prior to April 2024 are not publicly available.</em></p>
+                </div>
             </div>
           </div>
         </div>
-        <div class="content is-size-5">
-          <p><em>If you would like to be invited to any of these meetings, please contact <a href="mailto:adam@connectedbydata.org">adam@connectedbydata.org</a>.</em></p>
-        </div>
-
+        
         {%- assign upcoming = site.meetings | where: "upcoming", "true" -%}
         {%- if upcoming.size > 0 -%}
           <h3 class="title is-size-4">Upcoming meetings</h3>
