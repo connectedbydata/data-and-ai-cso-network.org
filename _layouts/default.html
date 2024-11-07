@@ -55,21 +55,6 @@
           {%- endfor -%}
         {%- endif -%}
 
-        {%- assign previous = site.meetings | where: "upcoming", "false" | reverse -%}
-        {%- if previous.size > 0 -%}
-          <h3 class="title is-size-4">Previous meetings</h3>
-          {%- for meeting in previous -%}
-            <div class="columns is-size-5">
-              <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
-              <div class="column is-three-fifths">{{ meeting.content }}</div>
-              <div class="column is-one-fifth"><a href="{{meeting.agenda}}">Notes</a></div>
-            </div>
-          {%- endfor -%}
-        {%- endif -%}
-        <div class="content is-size-6">
-          <p><em>Meeting notes prior to April 2024 are not publicly available.</em></p>
-        </div>
-      </div>
     </section>
 
     <section class="hero" id="dpd">
