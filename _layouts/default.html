@@ -28,91 +28,69 @@
         <div class="columns">
           <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
             <div class="content is-size-5">
-              <p>The Network hosts various meetings focused on different aspects of data and AI policy.</P> 
-                <p>Meetings are held under the Chatham House rule, with <a href="https://drive.google.com/drive/folders/1oyIAmBgCmT_XcZF90VEUPDaeswL9rbtU?usp=drive_link">notes from previous meetings made available publicly</a>. Participants can opt out of notes being made of their comments and/or being listed as an attendee.</P>
-                <div class="content is-size-6">
-                  <p><em>Meeting notes prior to April 2024 are not publicly available.</em></p>
-                </div>
-            </div>
-          </div>
-        </div>
-        
-        {%- assign upcoming = site.meetings | where: "upcoming", "true" -%}
-        {%- if upcoming.size > 0 -%}
-          <h3 class="title is-size-4">Upcoming meetings</h3>
-          {%- for meeting in upcoming -%}
-            <div class="columns is-size-5">
-              <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
-              <div class="column is-three-fifths">{{ meeting.content }}</div>
-              <div class="column is-one-fifth">
-                {%- if meeting.agenda -%}
-                  <a href="{{meeting.agenda}}">Agenda</a>
-                {%- else -%}
-                  Agenda TBC
-                {%- endif -%}
+              <p>The Network hosts various meetings focused on different aspects of data and AI policy.</p> 
+              <p>Meetings are held under the Chatham House rule, with <a href="https://drive.google.com/drive/folders/1oyIAmBgCmT_XcZF90VEUPDaeswL9rbtU?usp=drive_link">notes from previous meetings made available publicly</a>. Participants can opt out of notes being made of their comments and/or being listed as an attendee.</p>
+              <div class="content is-size-6">
+                <p><em>Meeting notes prior to April 2024 are not publicly available.</em></p>
               </div>
             </div>
-          {%- endfor -%}
-        {%- endif -%}
-
-    </section>
-
-    <section class="section" id="core">
-      <div class="container is-max-desktop">
-        <h2 class="title">Network core meeting</h2>
-        <div class="columns">
-          <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
-            <div class="content is-size-5">
-              <p>The Civil Society Data and AI Network core meeting brings together trade unions, digital rights organisations, researchers, activists and charities. This meeting is the core of the Network where we can discuss current affairs in data and AI, and to seek input and collaboration for advocacy and campaigning. The core meeting also regularly hosts guest attendees from regulators, policy makers and politicians.</P> 
-              <p>Connected by Data hosts the core meeting.</P>
-              <p>Meetings take place fortnightly online at <b>2 - 2:30/3pm on Tuesdays.</b></p>
-              <p>If you would like to be added to the recurring calendar invite or find out anything else about the Network please contact Adam <a href=mailto:adam@connectedbydata.org>adam@connectedbydata.org</a></p>
-                </div>
-            </div>
           </div>
         </div>
-
+      </div>
     </section>
 
+    {%- assign previous = site.meetings | where: "upcoming", "false" | reverse -%}
+    {%- assign upcoming = site.meetings | where: "upcoming", "true" -%}
 
-    <section class="section" id="databill">
-      <div class="container is-max-desktop">
-        <h2 class="title">Data Bill working group</h2>
-        <div class="columns">
-          <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
-            <div class="content is-size-5">
-              <p>The Data Bill working group will be a forum to deep dive into the Data (Use and Access) Bill as it makes its way through Parliament, with the intention to work on legislative strategy and advocacy as each attendee sees fit. </P> 
-              <p>The Ada Lovelace Institute and Open Rights Group will be co-hosting the meetings.</P>
-              <p>Meetings take place weekly online at <b>2 - 2:45 on Wednesdays.</b></p>
-              <p>If you would like to be added to the recurring calendar invite or find out anything else about the working group, please contact <a href=mailto:mbirtwistle@adalovelaceinstitute.org>Michael</a> and/or <a href=mailto:james.baker@openrightsgroup.org>James</a>.</p>
-                </div>
+    {%- for group in site.groups -%}
+      {%- assign id = group.id | split: "/" | last -%}
+      <section class="section" id="{{ id }}">
+        <div class="container is-max-desktop">
+          <h2 class="title">{{ group.title }}</h2>
+          <div class="columns">
+            <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
+              <div class="content is-size-5">
+                {{ group.content | markdownify }}
+              </div>
             </div>
           </div>
-        </div>
 
-    </section>
-
-
-
-
-    <section class="section" id="welfare">
-      <div class="container is-max-desktop">
-        <h2 class="title">Welfare and Tech working group</h2>
-        <div class="columns">
-          <div class="column is-three-quarters-desktop is-three-quarters-fullhd">
-            <div class="content is-size-5">
-              <p>The Welfare and Tech working group is a community of researchers, campaigners and policy specialists collaborating for equitable use of technologies in welfare benefits. No specific technology knowledge is necessary, with a wide range of organisations and individuals welcome to participate.</P> 
-              <p>Public Law Project and Big Brother Watch will be co-hosting the meetings.</P>
-              <p>The working group meets online every 6 weeks for 30-60 mins.</p>
-              <p>If you would like to be added to the recurring calendar invite or find out anything else about the working group, please contact <a href=mailto:susannah.copson@bigbrotherwatch.org.uk>Susannah</a> and/or <a href=mailto:c.selman@publiclawproject.org.uk>Caroline Selman</a>.</p>
+          {%- assign group-upcoming = upcoming | where: "group", id | slice: 0, 3 -%}
+          {%- if group-upcoming.size > 0 -%}
+            <h3 class="title is-size-4">Upcoming meetings</h3>
+            {%- for meeting in group-upcoming -%}
+              <div class="columns is-size-5">
+                <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
+                <div class="column is-three-fifths">{{ meeting.content }}</div>
+                <div class="column is-one-fifth">
+                  {%- if meeting.agenda -%}
+                    <a href="{{meeting.agenda}}">Agenda</a>
+                  {%- else -%}
+                    Agenda TBC
+                  {%- endif -%}
                 </div>
-            </div>
-          </div>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+
+          {%- assign group-recent = previous | where: "group", id | slice: 0, 3 -%}
+          {%- if group-recent.size > 0 -%}
+            <h3 class="title is-size-4">Recent meetings</h3>
+            {%- for meeting in group-recent -%}
+              <div class="columns is-size-5">
+                <div class="column is-one-fifth">{{ meeting.date | date: "%a %d %b %y" }} {{ meeting.start }}</div>
+                <div class="column is-three-fifths">{{ meeting.content }}</div>
+                <div class="column is-one-fifth">
+                  {%- if meeting.agenda -%}
+                    <a href="{{meeting.agenda}}">Minutes</a>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
         </div>
-
-    </section>
-
-
+      </section>
+    {%- endfor -%}
 
     <section class="hero" id="dpd">
       <div class="hero-body">
