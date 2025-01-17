@@ -7,4 +7,4 @@ Public Law Project and Big Brother Watch will be co-hosting the meetings.
 
 The working group meets online every 6 weeks for 30-60 mins.
 
-If you would like to be added to the recurring calendar invite or find out anything else about the working group, please contact [Susannah](mailto:susannah.copson@bigbrotherwatch.org.uk) and/or [Caroline](mailto:c.selman@publiclawproject.org.uk).
+If you would like to be added to the recurring calendar invite or find out anything else about the working group, please contact [Jasleen](mailto:jasleen.chaggar@bigbrotherwatch.org.uk) and/or [Caroline](mailto:c.selman@publiclawproject.org.uk).
