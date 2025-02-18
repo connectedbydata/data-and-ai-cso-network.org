@@ -10,7 +10,18 @@
         </a>
       </div>
       <div class="navbar-menu" id="navbarMenu">
-        <div class="navbar-start">        
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Groups
+            </a>
+            <div class="navbar-dropdown is-right">
+              {%- for group in site.groups -%}
+                {%- assign id = group.id | split: "/" | last -%}
+                <a class="navbar-item" href="#{{id}}">{{ group.title }}</a>
+              {%- endfor -%}
+            </div>
+          </div>
           <a class="navbar-item" href="#dpd">Data policy digest</a>
           <a class="navbar-item" href="#description">About the network</a>
           <a class="navbar-item" href="#testimonials">What participants say</a>

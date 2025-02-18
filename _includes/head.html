@@ -25,14 +25,27 @@
       font-family: "Cabin", sans-serif;
     }
 
+    .navbar-menu {
+      background-color: var(--platinum);
+      box-shadow: none;
+    }
+
     .hero.is-dark, .navbar.is-dark, .hero.is-dark .navbar-menu {
       background-color: var(--raisin-black);
       color: var(--platinum);
     }
 
     .hero.is-dark a.navbar-item:hover, a.navbar-item:hover {
-      background-color: var(--plum);
+      background-color: var(--plum) !important;
       color: var(--platinum);
+    }
+
+    .hero.is-dark .navbar-dropdown {
+      background-color: var(--emerald);
+    }
+
+    .hero.is-dark .navbar-dropdown a.navbar-item:hover {
+      background-color: var(--raisin-black) !important;
     }
 
     section.hero, section.hero .navbar, section.hero .navbar-menu {
@@ -59,11 +72,6 @@
 
     section.hero.is-small h2.title {
       padding-top: 0px;
-    }
-
-    .navbar-menu {
-      background-color: var(--platinum);
-      box-shadow: none;
     }
 
     .title {
