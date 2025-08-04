@@ -3,7 +3,7 @@ title: Welfare and Tech Working Group
 ---
 The Welfare and Tech working group is a community of researchers, campaigners and policy specialists collaborating for equitable use of technologies in welfare benefits. No specific technology knowledge is necessary, with a wide range of organisations and individuals welcome to participate.
 
-Public Law Project and Big Brother Watch will be co-hosting the meetings.
+Public Law Project and Big Brother Watch co-host the meetings.
 
 The working group meets online every 6 weeks for 30-60 mins.
 
