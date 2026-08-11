@@ -5,4 +5,4 @@ The Data and AI Civil Society Network core meeting brings together trade unions,
 
 Meetings take place on the **first Tuesday of the month**, online **at 2-3pm**.
 
-If you would like to join the core meeting, or find out anything else about the Network please contact [us](mailto:hello@connectedbydata.org).
+If you would like to join the core meeting, or find out anything else about the Network please contact [us](mailto:steph@our-ai-collective.info).
