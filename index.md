@@ -13,4 +13,4 @@ Conversations are held in confidence and mutual respect, with the aim to encoura
 
 There are no formal joining or participation requirements and new participants are welcome to join the Network.
 
-*If you would like to find out more and participate in the Network please contact us at [steph@our-ai-collective.info](mailto:steph@our-ai-collective.info).*
+*If you would like to find out more and participate in the Network please contact us at [csn@our-ai-collective.info](mailto:steph@our-ai-collective.info).*
